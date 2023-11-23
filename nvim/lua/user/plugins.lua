@@ -49,6 +49,8 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use "shatur/neovim-ayu"
 	use "lunarvim/colorschemes"
+	use 'wojciechkepka/vim-github-dark'
+	use 'rktjmp/lush.nvim'
 
 	--cmp plugins
 	use "hrsh7th/nvim-cmp"
@@ -78,13 +80,17 @@ return packer.startup(function(use)
 	}
 
 	-- Harpoon
-	use "theprimeagen/harpoon"
+	-- use "theprimeagen/harpoon"
 
 	-- Status line
 	use "ojroques/nvim-hardline"
 
 	-- Git
 	use "lewis6991/gitsigns.nvim"
+
+	-- Tree file explorer
+	use 'nvim-tree/nvim-tree.lua'
+	use 'nvim-tree/nvim-web-devicons' -- optional
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

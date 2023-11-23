@@ -5,7 +5,7 @@ end
 
 
 configs.setup {
-	ensure_installed = {"help", "javascript", "typescript", "lua", "python", "c"},
+	ensure_installed = {"help", "javascript", "typescript", "python", "c"},
 	sync_install = false,
 	auto_install = true,
 	ignore_install = { "" }, -- List of parsers to ignore installing

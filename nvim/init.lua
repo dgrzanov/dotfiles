@@ -6,8 +6,8 @@ require "user.lsp"
 require "user.telescope"
 require "user.treesitter"
 require "user.autopairs"
-require "user.harpoon"
 require "user.hardline"
 require "user.gitsigns"
+require "user.nvim-tree"
 
-require('ayu').colorscheme()
+vim.cmd [[colorscheme ghdark]]
