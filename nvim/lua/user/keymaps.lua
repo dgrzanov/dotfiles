@@ -17,8 +17,10 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
---keymap("n", "<leader>e", ":Lex 30<cr>", opts)
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+-- File explorer
+-- Should be NvimTree, but it doesn't work so Netrw for now
+keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+--keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 --Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<cr>", opts)

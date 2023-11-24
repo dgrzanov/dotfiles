@@ -17,4 +17,8 @@ vim.opt.termguicolors = true
 
 vim.opt.updatetime = 50
 
+-- Netrw options
+vim.g.netrw_liststyle = 3
+vim.g.netrw_banner = 0
+
 --vim.opt.autochdir = true
