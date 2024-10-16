@@ -48,13 +48,10 @@ keymap("n", "<leader>d", [["_d]], opts)
 keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
 
 
-
 -- INSERT --
-keymap("i", "jk", "<esc>", opts)
 
 
 -- VISUAL --
-keymap("v", "jk", "<esc>", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
@@ -62,9 +59,6 @@ keymap("v", ">", ">gv", opts)
 -- Move text up and down
 keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
-
--- Paste over visual selection
-keymap("v", "p", "_dP", opts)
 
 -- Copy to system register
 keymap("v", "<leader>y", [["+y]], opts)
