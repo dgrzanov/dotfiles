@@ -19,7 +19,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- File explorer
 -- Should be NvimTree, but it doesn't work so Netrw for now
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+keymap("n", "<leader>e", ":Lex 30 %:p:h<cr>", opts)
 --keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 --Resize with arrows
