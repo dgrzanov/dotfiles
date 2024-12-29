@@ -10,4 +10,4 @@ require "user.hardline"
 require "user.gitsigns"
 require "user.nvim-tree"
 
-vim.cmd [[colorscheme ghdark]]
+vim.cmd([[colorscheme everforest]])

@@ -51,6 +51,7 @@ return packer.startup(function(use)
 	use "lunarvim/colorschemes"
 	use 'wojciechkepka/vim-github-dark'
 	use 'rktjmp/lush.nvim'
+	use 'sainnhe/everforest'
 
 	--cmp plugins
 	use "hrsh7th/nvim-cmp"

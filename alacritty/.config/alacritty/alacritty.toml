@@ -1,4 +1,4 @@
 [general]
 import = [
-    "~/.config/alacritty/themes/themes/github_dark_tritanopia.toml"
+    "~/.config/alacritty/themes/themes/everforest_dark.toml"
 ]
