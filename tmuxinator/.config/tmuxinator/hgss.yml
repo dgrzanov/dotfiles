@@ -1,7 +1,7 @@
-# /home/dino/.config/tmuxinator/cms.yml
+# /home/dino/.config/tmuxinator/hgss.yml
 
-name: cms
-root: ~/Documents/prehnit/geo-cms/
+name: hgss
+root: ~/Documents/prehnit/hgss/
 
 # Optional tmux socket
 # socket_name: foo
@@ -52,16 +52,16 @@ windows:
       # synchronize: after
       panes:
         - fe:
-          - cd cms-fe
+          - cd hgss-fe
           - git pull
           - npm i
           - npm run start:dev
         - mw:
-          - cd cms-mw
+          - cd hgss-mw
           - git pull
           - docker compose up
-  - fe: cd cms-fe
-  - mw: cd cms-mw
+  - fe: cd hgss-fe
+  - mw: cd hgss-mw
   - db: 
-    - cd cms-db
+    - cd hgss-db
     - git pull
