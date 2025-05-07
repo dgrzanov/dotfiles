@@ -8,6 +8,5 @@ require "user.treesitter"
 require "user.autopairs"
 require "user.hardline"
 require "user.gitsigns"
-require "user.nvim-tree"
 
 vim.cmd([[colorscheme everforest]])

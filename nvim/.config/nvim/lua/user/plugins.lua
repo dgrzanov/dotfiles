@@ -40,36 +40,35 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-	-- My plugins here
 	use "wbthomason/packer.nvim" -- Have packer manage itself
 	use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-	use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+	use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
+
+	-- Autopairs plugin
 	use "windwp/nvim-autopairs"
 
 	-- Colorschemes
-	use "shatur/neovim-ayu"
-	use "lunarvim/colorschemes"
-	use 'wojciechkepka/vim-github-dark'
-	use 'rktjmp/lush.nvim'
+	use {"shatur/neovim-ayu", disable = true}
+	use {"lunarvim/colorschemes", disable = true}
+	use {'wojciechkepka/vim-github-dark', disable = true}
+	use {'rktjmp/lush.nvim', disable = true}
 	use 'sainnhe/everforest'
 
-	--cmp plugins
-	use "hrsh7th/nvim-cmp"
-	use "hrsh7th/cmp-buffer"
-	use "hrsh7th/cmp-path"
-	use "hrsh7th/cmp-cmdline"
-	use "saadparwaiz1/cmp_luasnip"
-	use "hrsh7th/cmp-nvim-lsp"
-	use "hrsh7th/cmp-nvim-lua"
+	-- cmp plugins
+	use "hrsh7th/nvim-cmp" -- completion plugin
+	use "hrsh7th/cmp-buffer" -- buffer completions
+	use "hrsh7th/cmp-path" -- poth completions
+	use "hrsh7th/cmp-cmdline" -- cmdline completions
+	use "saadparwaiz1/cmp_luasnip" -- snippet completions
+	use "hrsh7th/cmp-nvim-lsp" -- built-in LSP completions
+	use "hrsh7th/cmp-nvim-lua" -- nvim Lua API completions
 
-	--snippets
-	use "L3MON4D3/LuaSnip"
-	use "rafamadriz/friendly-snippets"
-	use "jose-elias-alvarez/null-ls.nvim"
+	-- snippets
+	use "L3MON4D3/LuaSnip" -- snippet engine
 
 	-- LSP
 	use "neovim/nvim-lspconfig"
-	use "williamboman/nvim-lsp-installer"
+	use "williamboman/nvim-lsp-installer" -- deprecated TODO replace with mason.nvim
 
 	-- Telescope
 	use "nvim-telescope/telescope.nvim"
