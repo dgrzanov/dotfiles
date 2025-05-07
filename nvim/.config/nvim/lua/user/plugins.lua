@@ -68,7 +68,9 @@ return packer.startup(function(use)
 
 	-- LSP
 	use "neovim/nvim-lspconfig"
-	use "williamboman/nvim-lsp-installer" -- deprecated TODO replace with mason.nvim
+	--use "williamboman/nvim-lsp-installer" -- deprecated TODO replace with mason.nvim
+	use "mason-org/mason.nvim"
+	use "mason-org/mason-lspconfig.nvim"
 
 	-- Telescope
 	use "nvim-telescope/telescope.nvim"
