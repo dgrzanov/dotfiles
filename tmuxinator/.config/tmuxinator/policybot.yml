@@ -1,7 +1,7 @@
 # /home/dino/.config/tmuxinator/paw.yml
 
-name: paw
-root: ~/Documents/prehnit/paw/
+name: policybot
+root: ~/Documents/policybot/
 
 # Optional tmux socket
 # socket_name: foo
@@ -45,23 +45,38 @@ root: ~/Documents/prehnit/paw/
 # attach: false
 
 windows:
-  - run:
-      layout: main-vertical
-      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
-      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
-      # synchronize: after
+  - main:
       panes:
-        - fe:
-          - cd paw-fe
+        - run:
+          - cd policybot
           - git pull
-          - npm i
-          - npm run start:dev
-        - mw:
-          - cd paw-mw
+        - container:
+          - cd policybot
+  - wt1:
+      panes:
+        - run:
+          - cd policybot_wt1
           - git pull
-          - sudo ./run_docker.sh dinog
-  - fe: cd paw-fe
-  - mw: cd paw-mw
-  - db: 
-    - cd paw-db
-    - git pull
+        - container:
+          - cd policybot_wt1
+  - wt2:
+      panes:
+        - run:
+          - cd policybot_wt2
+          - git pull
+        - container:
+          - cd policybot_wt2
+  - wt3:
+      panes:
+        - run:
+          - cd policybot_wt3
+          - git pull
+        - container:
+          - cd policybot_wt3
+  - wt4:
+      panes:
+        - run:
+          - cd policybot_wt4
+          - git pull
+        - container:
+          - cd policybot_wt4
