@@ -18,6 +18,6 @@ telescope.setup {
 local builtin = require("telescope.builtin")
 
 -- KEYBINDINGS
-vim.keymap.set("n", "<leader>f", builtin.find_files, {})
-vim.keymap.set("n", "<C-p>", builtin.git_files, {})
-vim.keymap.set("n", "<leader>s", builtin.live_grep, {})
+vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "Find files" })
+vim.keymap.set("n", "<C-p>", builtin.git_files, { desc = "Find Git files" })
+vim.keymap.set("n", "<leader>s", builtin.live_grep, { desc = "Search project text" })

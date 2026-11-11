@@ -17,8 +17,7 @@ vim.opt.termguicolors = true
 
 vim.opt.updatetime = 50
 
--- Netrw options
-vim.g.netrw_liststyle = 3
-vim.g.netrw_banner = 0
+-- which-key displays pending mappings after a short pause.
+vim.opt.timeoutlen = 500
 
 --vim.opt.autochdir = true

@@ -56,6 +56,6 @@ require('gitsigns').setup {
 			vim.keymap.set(mode, l, r, opts)
 		end
 
-    map('n', '<leader>bl', function() gitsigns.blame_line{full=true} end)
+    map('n', '<leader>bl', function() gitsigns.blame_line{full=true} end, { desc = "Blame current line" })
 	end
 }
