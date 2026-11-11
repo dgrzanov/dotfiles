@@ -14,6 +14,7 @@ vim.opt.scrolloff = 7
 vim.opt.mouse = "a"
 
 vim.opt.termguicolors = true
+vim.opt.showmode = false -- lualine displays the current mode.
 
 vim.opt.updatetime = 50
 

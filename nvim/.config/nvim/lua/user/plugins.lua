@@ -23,7 +23,8 @@ require("lazy").setup({
   -- Keep the API used by this config; parsers are installed/updated explicitly.
   { "nvim-treesitter/nvim-treesitter", branch = "master",
     config = function() require "user.treesitter" end },
-  { "ojroques/nvim-hardline", config = function() require "user.hardline" end },
+  { "nvim-lualine/lualine.nvim", dependencies = { "dgrzanov/lcars.nvim", "nvim-tree/nvim-web-devicons" },
+    config = function() require "user.lualine" end },
   { "lewis6991/gitsigns.nvim", config = function() require "user.gitsigns" end },
   { "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function() require "user.nvim-tree" end },

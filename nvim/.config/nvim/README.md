@@ -39,6 +39,10 @@ Old packer packages are not loaded (lazy resets `packpath`).
 Ctrl-k remains window-up. Tab / Shift-Tab navigate completion or native snippet
 placeholders. Smear-cursor is enabled for normal-mode movement.
 
+The LCARS statusline uses square screen edges, rounded inner ends, peach/violet color blocks, and a
+black center gap in one continuous bar across splits. Rounded ends use Powerline
+glyphs (`` / ``), so use a Nerd Font or another font containing those glyphs.
+
 ## Commenting
 
 Select lines with `V` and movement, then press **Space followed by /** to toggle
@@ -75,7 +79,7 @@ linter selection lives in `lua/user/lint.lua`.
 ## Other native alternatives (retained by choice)
 
 - nvim-cmp/sources: native LSP completion, buffer keyword completion, path completion.
-- hardline: native `statusline` (custom formatting needed).
+- lualine: native `statusline` (custom formatting needed). Lualine uses the LCARS theme.
 - Telescope: `:find`, `:grep`, quickfix (no equivalent picker UI).
 - nvim-treesitter: native highlighting with manually managed parser binaries/queries.
 - lspconfig: define server commands/root markers directly with `vim.lsp.config`.
