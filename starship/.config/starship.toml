@@ -7,7 +7,7 @@ add_newline = true
 palette = "lcars"
 
 # [ORANGE dir][CREME git]( cap )          ( cap )[VIOLET duration][ORANGE time]
-format = "$directory[ $git_branch$git_state$git_status](fg:black bg:almond_creme)$character"
+format = "$directory[ $git_branch$git_state$git_status ](fg:black bg:almond_creme)$character"
 right_format = "[](fg:african_violet)[ $cmd_duration$hostname](fg:black bg:african_violet)$time"
 
 [palettes.lcars]
@@ -28,16 +28,29 @@ truncation_length = 3
 truncation_symbol = ".../"
 
 [git_branch]
-format = "[$branch ]($style)"
+format = "[$branch]($style)"
 style = "fg:black bg:almond_creme"
 
 [git_state]
-format = "[$state $progress_current/$progress_total ]($style)"
+format = "[ $state $progress_current/$progress_total]($style)"
 style = "bold fg:black bg:almond_creme"
 
+# Counts like Powerlevel10k: ⇣behind ⇡ahead *stash ~conflict +staged !modified ?untracked
 [git_status]
-format = "[$all_status$ahead_behind ]($style)"
+format = "[$ahead_behind$all_status]($style)"
 style = "fg:black bg:almond_creme"
+ahead = " ⇡${count}"
+behind = " ⇣${count}"
+diverged = " ⇣${behind_count}⇡${ahead_count}"
+up_to_date = ""
+stashed = " *${count}"
+conflicted = " ~${count}"
+staged = " +${count}"
+modified = " !${count}"
+renamed = " »${count}"
+deleted = " ✘${count}"
+typechanged = ""
+untracked = " ?${count}"
 
 # The interior cap doubles as the status light: creme on success, red on failure.
 [character]
