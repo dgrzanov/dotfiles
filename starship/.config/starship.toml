@@ -1,0 +1,63 @@
+# LCARS Classic prompt. Palette: ~/lcars-colorscheme/palette/lcars.json
+# Mirrors the tmux status bar: square screen edges, rounded interior ends, black gap.
+# Rounded caps need a Nerd Font (MesloLGS NF via Ghostty's codepoint map).
+"$schema" = "https://starship.rs/config-schema.json"
+
+add_newline = true
+palette = "lcars"
+
+# [ORANGE dir][CREME git]( cap )          ( cap )[VIOLET duration][ORANGE time]
+format = "$directory[ $git_branch$git_state$git_status](fg:black bg:almond_creme)$character"
+right_format = "[](fg:african_violet)[ $cmd_duration$hostname](fg:black bg:african_violet)$time"
+
+[palettes.lcars]
+black = "#000000"
+orange = "#EB943A"
+almond_creme = "#FCC19F"
+african_violet = "#BAA4E5"
+barley = "#EDB378"
+true_mauve = "#C082A9"
+error = "#F08080"
+
+[directory]
+format = "[ $path$read_only ]($style)"
+style = "bold fg:black bg:orange"
+read_only = " RO"
+read_only_style = "bold fg:black bg:orange"
+truncation_length = 3
+truncation_symbol = ".../"
+
+[git_branch]
+format = "[$branch ]($style)"
+style = "fg:black bg:almond_creme"
+
+[git_state]
+format = "[$state $progress_current/$progress_total ]($style)"
+style = "bold fg:black bg:almond_creme"
+
+[git_status]
+format = "[$all_status$ahead_behind ]($style)"
+style = "fg:black bg:almond_creme"
+
+# The interior cap doubles as the status light: creme on success, red on failure.
+[character]
+format = "$symbol "
+success_symbol = "[](fg:almond_creme)"
+error_symbol = "[](fg:error)"
+vimcmd_symbol = "[](fg:true_mauve)"
+
+[cmd_duration]
+min_time = 0
+format = "[$duration ]($style)"
+style = "fg:black bg:african_violet"
+
+[hostname]
+ssh_only = true
+format = "[ $hostname ]($style)"
+style = "fg:black bg:barley"
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "[ $time ]($style)"
+style = "bold fg:black bg:orange"

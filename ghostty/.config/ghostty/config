@@ -1,5 +1,8 @@
 # Ghostty config — see `ghostty +show-config --default --docs` for all options
 
+# Shell: fish (login shell, so PATH setup in config.fish runs)
+command = /opt/homebrew/bin/fish --login
+
 # Primary font: Iosevka Term Regular, 15pt
 font-family = "Iosevka Term"
 font-style = Regular
