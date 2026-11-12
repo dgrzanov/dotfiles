@@ -20,8 +20,8 @@ require("lazy").setup({
   }, config = function() require "user.lsp" end },
   { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" },
     config = function() require "user.telescope" end },
-  -- Keep the API used by this config; parsers are installed/updated explicitly.
-  { "nvim-treesitter/nvim-treesitter", branch = "master",
+  -- `main` is the Neovim 0.12+ rewrite; it does not support lazy-loading.
+  { "nvim-treesitter/nvim-treesitter", branch = "main", lazy = false, build = ":TSUpdate",
     config = function() require "user.treesitter" end },
   { "nvim-lualine/lualine.nvim", dependencies = { "dgrzanov/lcars.nvim", "nvim-tree/nvim-web-devicons" },
     config = function() require "user.lualine" end },
