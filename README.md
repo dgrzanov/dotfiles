@@ -11,7 +11,7 @@ These configs target macOS with [Homebrew](https://brew.sh) installed at `/opt/h
 
 | Tool | Needed for | Install |
 | --- | --- | --- |
-| [Homebrew](https://brew.sh) | Installing everything else; `brew shellenv` in fish, `brew --prefix` in zsh | see brew.sh |
+| [Homebrew](https://brew.sh) | Installing everything else; `brew shellenv` in fish | see brew.sh |
 | [GNU Stow](https://www.gnu.org/software/stow/) | Symlinking the configs | `brew install stow` |
 | Git | Cloning this repo, lazy.nvim bootstrap | `xcode-select --install` or `brew install git` |
 
@@ -38,10 +38,8 @@ cd ~/lcars-colorscheme && npm install && npm run build
 | Package | Requires |
 | --- | --- |
 | `fish` | [fish](https://fishshell.com) (`brew install fish`), [starship](https://starship.rs) (`brew install starship`), [zoxide](https://github.com/ajeetdsouza/zoxide) (`brew install zoxide`), LCARS colorscheme (for the prompt palette). Optional: Rust/Cargo (`~/.cargo/bin` is added to PATH), Python 3.11 from python.org (its framework `bin` is added to PATH) |
-| `zsh` | [Powerlevel10k](https://github.com/romkatv/powerlevel10k) via Homebrew (`brew install powerlevel10k`), zoxide (`brew install zoxide`) |
 | `starship` | starship (`brew install starship`), a Nerd Font |
 | `ghostty` | [Ghostty](https://ghostty.org) (`brew install --cask ghostty`), fish at `/opt/homebrew/bin/fish`, Iosevka Term + MesloLGS NF, LCARS colorscheme |
-| `alacritty` | [Alacritty](https://alacritty.org) (`brew install --cask alacritty`), [alacritty-theme](https://github.com/alacritty/alacritty-theme) cloned into `~/.config/alacritty/themes` |
 | `tmux` | [tmux](https://github.com/tmux/tmux) (`brew install tmux`), fish at `/opt/homebrew/bin/fish` (default shell), a Nerd Font, LCARS colorscheme, `xclip` for copy-mode yank |
 | `tmuxinator` | [tmuxinator](https://github.com/tmuxinator/tmuxinator) (`brew install tmuxinator`), tmux |
 | `nvim` | See below |
@@ -74,9 +72,9 @@ tools installed through them.
 Everything required (not the optional LSPs/linters) in one go:
 
 ```zsh
-brew install stow git fish starship zoxide powerlevel10k tmux tmuxinator \
+brew install stow git fish starship zoxide tmux tmuxinator \
   neovim tree-sitter-cli ripgrep lazygit node xclip
-brew install --cask ghostty alacritty font-iosevka font-meslo-lg-nerd-font
+brew install --cask ghostty font-iosevka font-meslo-lg-nerd-font
 ```
 
 ## Installation
