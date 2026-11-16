@@ -1,5 +1,5 @@
 # PATH (ported from ~/.zprofile and ~/.zshenv)
-/opt/homebrew/bin/brew shellenv | source
+/opt/homebrew/bin/brew shellenv fish | source
 fish_add_path /Library/Frameworks/Python.framework/Versions/3.11/bin
 fish_add_path $HOME/.cargo/bin
 # fish_add_path ~/scripts

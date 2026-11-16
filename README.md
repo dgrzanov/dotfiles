@@ -92,3 +92,14 @@ stow nvim
 ```
 
 Stow will create a symlink in the location the config is supposed to be to the config located in this repository.
+
+### Use Fish in interactive terminals
+
+```zsh
+stow fish zsh
+```
+
+The `zsh` config launches `/opt/homebrew/bin/fish` for interactive sessions,
+preserving login-shell mode. Open a new terminal after installing it. This leaves
+the macOS account's login-shell setting unchanged; Ghostty and tmux also select
+Fish directly in their configs.
