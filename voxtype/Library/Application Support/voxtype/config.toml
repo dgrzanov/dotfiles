@@ -71,7 +71,7 @@ max_duration_secs = 60
 # .en models are English-only but faster and more accurate for English
 # large-v3-turbo is faster than large-v3 with minimal accuracy loss (recommended for GPU)
 # Or provide absolute path to a custom .bin model file
-model = "base.en"
+model = "small.en"
 
 # Language for transcription
 # Options:
@@ -103,7 +103,7 @@ translate = false
 # Initial prompt to provide context for transcription
 # Use this to hint at terminology, proper nouns, or formatting conventions.
 # Example: "Technical discussion about Rust, TypeScript, and Kubernetes."
-# initial_prompt = ""
+initial_prompt = "TypeScript, PostgreSQL, pytest, git, Python, scrapy, Neovim."
 
 # --- Multi-model settings ---
 #
@@ -125,7 +125,7 @@ translate = false
 #
 # Enable eager input processing (transcribe chunks while recording continues)
 # Reduces perceived latency on slower machines by processing audio in parallel.
-eager_processing = true
+eager_processing = false
 #
 # Duration of each audio chunk in seconds (default: 5.0)
 # eager_chunk_secs = 5.0
@@ -151,6 +151,8 @@ eager_processing = true
 # remote_timeout_secs = 30
 
 [output]
+# Pause macOS Now Playing during capture (requires brew install media-control).
+pre_recording_command = 'sh "$HOME/Library/Application Support/voxtype/pause-music.sh"'
 # Primary output mode: "type" or "clipboard"
 # - type: Simulates keyboard input at cursor position (requires ydotool)
 # - clipboard: Copies text to clipboard (requires wl-copy)
