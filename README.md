@@ -52,12 +52,7 @@ Full details are in [nvim/.config/nvim/README.md](nvim/.config/nvim/README.md).
 - **Treesitter:** [`tree-sitter` CLI](https://github.com/tree-sitter/tree-sitter) and a C compiler for building parsers (`brew install tree-sitter-cli`)
 - **Search:** [ripgrep](https://github.com/BurntSushi/ripgrep) for `Space s` live grep (`brew install ripgrep`)
 - **Git UI:** [lazygit](https://github.com/jesseduffield/lazygit) for `Space gg` (`brew install lazygit`)
-- **Language servers** (optional, enabled only if found on PATH):
-  - Python: `uv tool install pyright`
-  - Lua: `brew install lua-language-server`
-  - JS/TS: `npm install -g typescript typescript-language-server`
-  - Bash: `npm install -g bash-language-server`
-  - C/C++: `clangd` (ships with Xcode Command Line Tools)
+- **Language servers:** Opening a Python, Lua, JavaScript/TypeScript, C/C++, or Bash file installs its missing language server with Mason and enables it in the current session.
 - **Linters** (optional, run on demand with `Space cl`):
   - Python: `uv tool install ruff`
   - JS/TS: `npm install -g eslint_d`

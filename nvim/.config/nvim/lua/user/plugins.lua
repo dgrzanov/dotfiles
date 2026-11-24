@@ -16,6 +16,7 @@ require("lazy").setup({
   { "windwp/nvim-autopairs", dependencies = { "hrsh7th/nvim-cmp" },
     config = function() require "user.autopairs" end },
   { "neovim/nvim-lspconfig", dependencies = {
+    { "mason-org/mason.nvim", opts = {} },
     "hrsh7th/cmp-nvim-lsp",
   }, config = function() require "user.lsp" end },
   { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" },

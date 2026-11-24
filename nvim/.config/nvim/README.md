@@ -58,23 +58,20 @@ Project `.venv/bin` and `node_modules/.bin` binaries take precedence over PATH.
 Diagnostics use Neovim's native UI. Ruff checks the current unsaved buffer and
 respects project configuration; this binding does not apply fixes.
 
-Mason and LuaSnip have been replaced as requested. Snippet expansion and jumping
+Snippet expansion and jumping
 use `vim.snippet` via nvim-cmp; LuaSnip-specific snippet collections are not loaded.
 `nvim-lspconfig` remains for its server definitions, with native
 `vim.lsp.config` / `vim.lsp.enable` configuring and enabling servers.
 
-Install desired servers explicitly and restart Neovim:
+Opening a matching file installs its missing server in the background with Mason.
+Python uses Pyright, JavaScript and TypeScript share typescript-language-server,
+Lua uses lua-language-server, Bash uses bash-language-server, and C/C++ uses clangd
+(from LLVM). Neovim reuses servers on PATH or in its Mason bin directory. When an
+install finishes, eligible open buffers attach in the same session. Use `:Mason` to inspect installed tools. If installation
+fails, see `:MasonLog` for details and reopen the file to retry.
 
-- Python: `uv tool install pyright`
-- Lua: `brew install lua-language-server`
-- JS/TS: `npm install -g typescript typescript-language-server`
-- Bash: `npm install -g bash-language-server`
-- C/C++: clangd on PATH
-
-Only available servers are enabled. Previously installed binaries under
-`~/.local/share/nvim/mason/bin` are reused as a migration fallback, without loading
-Mason or updating those tools. Server configuration lives in `lua/user/lsp/init.lua`;
-linter selection lives in `lua/user/lint.lua`.
+Server configuration lives in `lua/user/lsp/init.lua`; linter selection lives in
+`lua/user/lint.lua`.
 
 ## Other native alternatives (retained by choice)
 
