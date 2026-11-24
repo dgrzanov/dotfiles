@@ -6,6 +6,14 @@ end
 local actions = require("telescope.actions")
 
 telescope.setup {
+	pickers = {
+		find_files = {
+			find_command = { "rg", "--files", "--hidden", "--no-ignore", "--glob", "!.git", "--glob", "!node_modules" },
+		},
+		live_grep = {
+			additional_args = { "--hidden", "--no-ignore", "--glob", "!.git", "--glob", "!node_modules" },
+		},
+	},
 	defaults = {
 		mappings = {
 			i = {

@@ -2,6 +2,7 @@ require("nvim-tree").setup({
   hijack_netrw = true,
   sync_root_with_cwd = true,
   update_focused_file = { enable = true },
+  filters = { dotfiles = false, git_ignored = false },
   view = { width = 30, side = "left" },
   renderer = { highlight_git = true, root_folder_label = ":t" },
   diagnostics = { enable = true },
